@@ -49,9 +49,9 @@ async def addchat(_, message):
     is_kuki = kuki.find_one({"chat_id": message.chat.id})
     if not is_kuki:
         kuki.insert_one({"chat_id": message.chat.id})
-        await message.reply_text(f"✅ | Successfully\nKuki Chatbot of this Group is set to @{message.chat.username}\n Requested by [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n© @MetaVoid")
+        await message.reply_text(f"✅ | Successfully\nH.O.M.I.E.S Chatbot of this Group is set to @{message.chat.username}\n Requested by [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n© @real_homies")
     else:
-        await message.reply_text(f"Already Setup Kuki Chatbot of this Group Is @{message.chat.username}")
+        await message.reply_text(f"Already Setup H.O.M.I.E.S Chatbot of this Group Is @{message.chat.username}")
 
 
 @bot.on_message(
@@ -72,10 +72,10 @@ async def rmchat(_, message):
             )
     is_kuki = kuki.find_one({"chat_id": message.chat.id})
     if not is_kuki:
-        await message.reply_text("Already Kuki ChatBot Disable")
+        await message.reply_text("Already H.O.M.I.E.S ChatBot Disable")
     else:
         kuki.delete_one({"chat_id": message.chat.id})
-        await message.reply_text("✅ | Kuki Chatbot is disable!")
+        await message.reply_text("✅ | H.O.M.I.E.S Chatbot is disable!")
 
 
 
@@ -177,17 +177,17 @@ async def start(client, message):
     if message.chat.type != "private":
         buttons = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Click here",
-                url=f"t.me/kukichatbot?start")]])
+                url=f"t.me/HomiesAttendant_bot?start")]])
         await message.reply("Contact me in PM",
                             reply_markup=buttons)
         
     else:
-        buttons = [[InlineKeyboardButton("Support", url="https://t.me/metavoidsupport"),
-                    InlineKeyboardButton("Channel", url="https://t.me/metavoid"),
-                    InlineKeyboardButton("Repo", url="https://github.com/metavoidteam/kukichatbot")
+        buttons = [[InlineKeyboardButton("Support", url="https://t.me/real_homies"),
+                    InlineKeyboardButton("Channel", url="https://t.me/real_homie"),
+                    InlineKeyboardButton("YM", url="")
                     ]]
-        Photo = "https://telegra.ph/file/b04509cc8486f23690bba.jpg"
-        await message.reply_photo(Photo, caption=f"Hello [{message.from_user.first_name}](tg://user?id={message.from_user.id}), Machine Learning Chat Bot that can talk about any topic in any language\n /help - Help Commands\n Powered By @MetaVoid", reply_markup=InlineKeyboardMarkup(buttons))
+        Photo = "https://telegra.ph/file/1dfada489528335e50d1c.png"
+        await message.reply_photo(Photo, caption=f"Hello [{message.from_user.first_name}](tg://user?id={message.from_user.id}), Machine Learning Chat Bot that can talk about any topic in any language\n /help - Help Commands\n Powered By @real_homies", reply_markup=InlineKeyboardMarkup(buttons))
 
 
 
@@ -198,12 +198,12 @@ async def help(client, message):
     if message.chat.type != "private":
         buttons = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Click here",
-                url=f"t.me/kukichatbot?start=help_")]])
+                url=f"HomiesAttendant_bot?start=help_")]])
         await message.reply("Contact me in PM",
                             reply_markup=buttons)
         
     else:    
-        await message.reply_text("/start - Start The Bot\n/chat - Send a message to this bot\n/setupchat - Active Kuki Chatbot In Group\n/removechat - Disable Kuki Chatbot In Group")
+        await message.reply_text("/start - Start The Bot\n/chat - Send a message to this bot\n/setupchat - Active H.O.M.I.E.S Chatbot In Group\n/removechat - Disable H.O.M.I.E.S Chatbot In Group")
 
 
 
