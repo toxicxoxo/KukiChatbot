@@ -1,8 +1,8 @@
 {
     "name": "KukiChatBot",
     "description": "Hello, I am KUKI An Intelligent ChatBot. If You Are Feeling Lonely, You can Always Come to me and Chat With Me!",
-    "logo": "https://telegra.ph/file/a54ed27b0dc3fc3e439fd.jpg",
-    "repository": "https://github.com/MoeZilla/kukichatbot",
+    "logo": "https://telegra.ph/file/3d3bc9ede725f2e10e921.jpg",
+    "repository": "https://github.com/toxicxoxo/KukiChatbot",
     "env": {
         "BOT_TOKEN": {
             "description": "telegram bot token here",
